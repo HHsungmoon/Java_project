@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../imgs/">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>HSM's INF</title>
+    <style>
+        table{
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        th,
+        td{
+            border: 1px solid blue;
+            padding: 12px;
+        }
+        .col1{
+            width: 40px;
+            background-color: yellow;
+        }
+        .col2{
+            width: 100px;
+        }
+        .col3{
+            width: 100px;
+        }
+        .col4{
+            width: 100px;
+        }
+        .col5{
+            width: 100px;
+        }
+        .col6{
+            width: 100px;
+        }
+        .col7{
+            width: 100px;
+        }
+        .green--text{
+            color:greenyellow;
+        }
+        .text_line_non{
+            text-decoration: none;
+        }
+        #background_dark{
+            background-color: black;
+            color: white;
+        }
+        #yellow-strength{
+            color: yellow;
+        }
+        .color_box1{
+            border: 2px solid red;
+            background-color: gray;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: blue;">HSM's HTML study project1</h1>
+        <hr />
+        <h4>User : <strong>한양대학교</strong> <i>컴퓨터소프트웨어학부</i> <b>20학번</b> 홍성문</h4>
+        <h4 class="green--text">date : 2023-2-28</h4>
+        <hr />
+    </header>
+    <h3>방문자 정보 기입</h3>
+    <form action="">
+        <fieldset>
+            <legend>방문자 목록 작성</legend>
+            <label for="username">이름</label>
+            <input type="text" id="username" required autofocus> <!-- readonly, disabled, value-->
+            <br>
+            <label for="visit resion">이유</label>
+            <input type="text" id="visit resion" required placeholder="간단하게 적어주세요">
+            <br>
+            <label for="date">날짜</label>
+            <input type="date" id="date">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>방문자 인증</legend>
+            <ul>
+                <li>
+                    <label for="password">비번</label>
+                    <input type="password" id="password" required>
+                </li>
+                <li>
+                    <label for="student number">학번</label>
+                    <input type="number" id="student number" required min="20200000" max="2021000000" placeholder="2020xxxxxx">
+                </li>
+                <li>
+                    <label for="email">메일</label>
+                    <input type="email" id="email" required >
+                </li>
+                <li>
+                    <label for="tel">전화</label>
+                    <input type="tel" id="tel" required value="01024013487">
+                </li>
+            </ul>
+        </fieldset><br>
+        <fieldset>
+            <legend>파일 업로드</legend>
+            <input type="file">
+        </fieldset><br>
+
+        <input type="submit" value="submition">
+    </form>
+    <br>
+    <hr>
+    <form action="/signup">
+        <fieldset>
+            <legend>모두 선택해 주세요</legend>
+            <ul>
+                <li>
+                    <label for="check1">최근 1개월 이내에 코로나 확진 판정을 받았습니까?</label>
+                    <input type="checkbox" id="check1">
+                </li>
+                <li>
+                    <label for="check1">최근 1개월 이내에 해외방문을 했습니까?</label>
+                    <input type="checkbox" id="check1">
+                </li>
+                <li>
+                    <label for="check1">최근 1개월 이내에 가족,지인 중 확진판정을 받은 사람이 있습니까?</label>
+                    <input type="checkbox" id="check1">
+                </li>
+                <br>
+                <li>
+                    <fieldset>
+                        <legend>당신의 한양대 내에서의 소속을 적어주세요</legend>
+                        <label for="type1">공과대학</label>
+                        <input type="radio" name="school" id="type1" value="type1">
+
+                        <label for="type2">인문대학</label>
+                        <input type="radio" name="school" id="type2" value="type2">
+
+                        <label for="type3">자연과학대학</label>
+                        <input type="radio" name="school" id="type3" value="type3">
+
+                        <label for="type4">예술대학</label>
+                        <input type="radio" name="school" id="type4" value="type4">
+
+                        <br><br>
+                        <select name="grade" id="grade">
+                            <option value="1" selected>1학년</option>
+                            <option value="2">2학년</option>
+                            <option value="3">3학년</option>
+                            <option value="4">4학년</option>
+                        </select>
+                    </fieldset>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <button type="submit">제출하기</button>
+        <button type="reset">초기화</button>
+        
+    </form>
+    <br><hr>
+    <p>
+        <h2><b>Study List 2023</b></h2>
+        <ol>
+            <h3>AI project</h3>
+            <li>CNN model -plant disease clasification</li>
+            <li>GAN model -with MNIST</li>
+            <li>GAN model 2 -with MNIST</li>
+            <li>Resnet18 model</li>
+            <li>DCGAN model - with CIFAR10</li>
+        </ol>
+        <ul>
+            <h3>C project</h3>
+            <li>Snake Game with C </li>
+            <li>Back_joon study</li>
+            <li>Programers</li>
+        </ul>
+        
+    </p>
+    <br>
+    <p>
+        <h2><b>Study List 2022</b></h2>
+        <dl>
+            <dt>C++ 자료구조론</dt>
+            <dd>-리스트, 스택 등등</dd>
+            <dt>C++ 코딩테스트 알고리즘</dt>
+            <dd>-그리디, DFS, BFS 등등</dd>
+            <dt>python pytorch</dt>
+        </dl>
+    </p>
+    <!--새창에서 열기 target을 _blank로 설정-->
+    goto&nbsp:&nbsp
+    <a class="text_line_non" href="https://github.com/HHsungmoon" title="github" target="_blank"> 
+        HSM's-Github
+        <!--밑줄을 없애는 class 설정-->
+    </a>
+    <hr>
+    <p id="background_dark">
+        아무말 <span id="yellow-strength">대잔치</span>  <br>
+        akdsnkfjqwefjwi
+    </p>
+    <p>
+        <p class="color_box1">홍성문의 <span id="yellow-strength">취미</span>,취향</p>
+
+    </p>
+    <br>
+    <hr />
+    
+    <h1>시간표</h1>
+    <table border="caption">
+        <caption>2023-1</caption>
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+            <col class="col4">
+            <col class="col5">
+            <col class="col6">
+            <col class="col7">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>time</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00~10:00</td>
+                <td></td>
+                <td rowspan="2">확률과 통계</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>09:00~10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td>10:00~11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11:00~12:00</td>
+                <td rowspan="2">객체지향 시스템 설계(2시간)</td>
+                <td rowspan="2">영어연기 개론(2시간)</td>
+                <td rowspan="2"> 자료구조론(2시간)</td>
+                <td rowspan="2"> 자료구조론(2시간)</td>
+                <td></td> 
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:00~13:00</td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td>13:00~14:00</td>
+                <td rowspan="2">확률과 통계론</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00~15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15:00~16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:00~17:00</td>
+                <td rowspan="2">디지털 논리(1.5시간)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17:00~18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>  
+            </tr>
+            <tr>
+                <td>18:00~19:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <br><br>
+    <h1>사진</h1>
+    <img width = "100" src="self_camera.jpg" alt="face">
+  
+    <br><hr><br>
+    <fieldset>
+        <legend>방문 후기</legend>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <h5> <b>korea</b></h5>
+    <h6> 서울특별시 성북구 성북로 6가길 23, 304호</h6>
+    
+</body>
+</html>
