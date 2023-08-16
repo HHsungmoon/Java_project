@@ -1,0 +1,35 @@
+.best_food{
+    margin: 20px;
+    margin-top:100px;
+}
+
+.best_food h2{
+    position: absolute;
+    transform: translate(110%, -120%);
+    color: red;
+}
+
+.img_container{
+    background-image: url("../imgs/배경2.png");
+    background-repeat: repeat; /*기본이 repeat이고 no-repeat을 하게 되면 반복 안됨*/
+
+    /*fixed,scroll은 배경 이미지가 고정됨, local은 scroll텍스트와 고정되서 움직임*/
+    background-attachment: fixed; 
+    overflow: scroll;
+
+    /* background-size: contain; */
+    
+    width: 600px;
+    height: 500px;
+    border:2px solid black;
+    padding: 20px;
+}
+
+.self_img{
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-120%, 10%);
+
+}

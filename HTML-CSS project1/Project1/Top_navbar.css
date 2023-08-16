@@ -1,0 +1,42 @@
+.top_navbar{
+    background-color: rgba(0, 50, 108, 0.752);
+    height: 50px;
+    width: 100%;
+    
+}
+
+
+.top_navbar li{
+    display: inline-block; /*block 요소를 좌우로 배치*/
+    margin: 0 8px;
+    line-height: 50px;
+}
+
+.top_navbar a{
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* 가상클래스 적용
+.top_navbar a:link{
+    color: black;
+}
+
+.top_navbar a:visited{
+    color: white;
+} 
+*/
+
+.top_navbar a:hover{
+    background-color: gray;
+    border: 2px solid white;
+    font-size: 25px;
+    font-weight: 500;
+}
+

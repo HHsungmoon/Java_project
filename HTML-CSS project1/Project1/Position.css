@@ -1,0 +1,71 @@
+.contect_button_fixed div{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    /* background-color: yellow; */
+    background: radial-gradient(white,yellow);
+    color: black;
+    border: 4px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    /* 텍스트 정 중앙 정렬을 위해 필요한 스타일 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.position_sticky{
+    position: sticky;
+    top: 20px;
+    text-align: right;
+    
+}
+
+.position_sticky h3{
+    position: relative;
+    right: 57px;
+}
+
+#Position{
+    margin: 20px;
+}
+
+#Position main{
+    background-color: yellow;
+    margin: 0 auto;
+    max-width: 600px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#Position section{
+    background-color: violet;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#Position article{
+    background-color: cyan;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#Position div{
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#Position div.relative{
+    position: relative;
+    left: 20px; /*top, left, right, bottom 속성 가능*/
+}
+
+#Position div.absolute{
+    position: absolute;
+    background-color: gray;
+    /* top: 0px; 조상 태그중에 포지션이 static이 아닌것을 기준으로 하기 때문에 해당 코드 실행시 body까지 잡힌다.*/
+}

@@ -1,0 +1,74 @@
+/* github라는 text를 포함하는 a태그 속성 선택 */
+a[href*="github"][title="github"]{
+    color: blue;
+    background-color: aqua;
+    text-decoration: none;
+
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+a[href*="AI"][title="github"] {
+    background-color: yellow;
+}
+
+h3[class~='git']{
+    font-size: 25px;
+    font-weight: 1000;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px gray;
+}
+
+.div_motto{
+    display: inline-block;
+
+    font-size: 18px;
+    color: black;
+    background-color: rgba(5, 251, 243, 0.893);
+
+    /*디스플레이 속성을 변경해서 vertical-align 값의 변경으로 세로정렬을 구현 */
+    display: table-cell;   
+    text-align: center;
+    vertical-align: middle;
+    /* div를 두개 사용해서 text를 조절해 줄 수도 있다. transform사용*/
+
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius:50%;
+}
+
+#motto_relative {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    left: 40%;    
+}
+
+.salmon_img{
+    width: 300px;
+}
+
+.float_left{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.float_right{
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.fieldset_text_box{
+    margin: 20px;
+}
+
+.fieldset_text_box textarea{
+    width: 500px;
+    height: 500px;
+}

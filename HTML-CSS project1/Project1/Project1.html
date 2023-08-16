@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+    <title>HSM's HTML/CSS study project</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .p_birth{
+            color: gray;
+            font-weight: 1000; /*폰트의 두께*/
+            text-align: center;
+        }
+    </style>
+
+    <link rel="stylesheet" href="table_movie.css">
+    <link rel="stylesheet" href="CSS_basic.css">
+    <link rel="stylesheet" href="Top_navbar.css">
+    <link rel="stylesheet" href="Position.css">
+    <link rel="stylesheet" href="Image.css">
+    <link rel="stylesheet" href="Visiter.css">
+    <link rel="stylesheet" href="Figure.css">
+    
+</head>
+<body>
+    <!-- 상단 네비게이션 바 -->
+    <nav class="top_navbar">
+        <ul>
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="https://www.hanyang.ac.kr/" target="_blank">Hanyang</a></li>
+            <li><a href="https://github.com/" target="_blank">Git</a></li>
+            <li><a href="http://cs.hanyang.ac.kr/" target="_blank">HY-CSE</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 style="color: blue; text-align:center; margin-top:20px">HSM's HTML study project1</h1>
+        <h4 style="text-align:center">User : <strong>한양대학교</strong> <i>컴퓨터소프트웨어학부</i> <b>20학번</b> 홍성문</h4>
+        <p class="p_birth">1999년 5월 27일</p>
+    </header>
+
+    <!--새창에서 열기 target을 _blank로 설정-->
+    <section class="position_sticky">
+            <h3 class="git repository link">-HSM's github Link</h3> 
+            <a href="https://github.com/HHsungmoon/C_project"  title="github" target="_blank"> Github-C_project</a>
+            <a href="https://github.com/HHsungmoon/AI_project" title="github" target="_blank"> Github-AI_project</a>
+    </section>
+
+
+    <!-- 원 만드는 CSS와 boxmodel -->
+    <article id="motto_relative">
+        <img src="../imgs/self_camera.jpg" class="self_img" alt="face">
+        <div class="div_motto">
+            나만이 내 인생을 바꿀 수 있다<br>
+            불가능이란 노력하지 않은 자의 변명이다<br>
+            하지 않는 것이지, 못하는 것이 아니다<br>
+            서두르지 말되, 멈추지 말아라<br>
+        </div>
+    </article>
+    
+    <!-- 다양한 form 태그를 설문형식으로 구현 -->
+    <section id="visiter_cov19_check">
+        <form action="/signup"> <!-- 서식 데이터(form data)를 서버로 보낼 때 해당 데이터가 도착할 URL -->
+            <fieldset>
+                <legend style="border: 2px solid red;">Cov19관련 설문입니다.</legend>
+                <ul>
+                    <li>
+                        <label for="check1">최근 1개월 이내에 코로나 확진 판정을 받았습니까?</label>
+                        <input type="checkbox" id="check1">
+                    </li>
+                    <li>
+                        <label for="check1">최근 1개월 이내에 해외방문을 했습니까?</label>
+                        <input type="checkbox" id="check1">
+                    </li>
+                    <li>
+                        <label for="check1">최근 1개월 이내에 가족,지인 중 확진판정을 받은 사람이 있습니까?</label>
+                        <input type="checkbox" id="check1">
+                    </li>
+                    <br>
+                    <li>
+                        <fieldset>
+                            <legend>당신의 한양대 내에서의 소속을 적어주세요</legend>
+                            <label for="type1">공과대학</label>
+                            <input type="radio" name="school" id="type1" value="type1">
+    
+                            <label for="type2">인문대학</label>
+                            <input type="radio" name="school" id="type2" value="type2">
+    
+                            <label for="type3">자연과학대학</label>
+                            <input type="radio" name="school" id="type3" value="type3">
+    
+                            <label for="type4">예술대학</label>
+                            <input type="radio" name="school" id="type4" value="type4">
+    
+                            <br><br>
+                            <select name="grade" id="grade">
+                                <option value="1" selected>1학년</option>
+                                <option value="2">2학년</option>
+                                <option value="3">3학년</option>
+                                <option value="4">4학년</option>
+                            </select>
+                        </fieldset>
+                    </li>
+                </ul>
+                <br>
+                <button type="submit">제출하기</button>
+                <button data-tooltip="설문지를 다시 작성하시겠습니까?" type="reset">초기화</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="visiter_list">
+        <h3>*방문자 정보 기입*</h3><br>
+        <form action="">
+            <fieldset >
+                <legend>방문자 목록 작성</legend>
+                <div class="field"> <!--가상클래스 focus적용-->
+                    <label class="required_dot" for="username">이름</label>
+                    <input type="text" id="username" required autofocus> <!-- readonly, disabled, value-->
+                </div>
+                <label class="required_dot" for="visit resion">이유</label>
+                <input type="text" id="visit resion" required placeholder="간단하게 적어주세요">
+                <br>
+                <label for="date">날짜</label>
+                <input type="date" id="date">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>방문자 인증</legend>
+                <ul>
+                    <li>
+                        <label for="password">비번</label>
+                        <input type="password" id="password" required>
+                    </li>
+                    <li>
+                        <label for="student number">학번</label>
+                        <input type="number" id="student number" required min="20200000" max="2021000000" placeholder="2020xxxxxx">
+                    </li>
+                    <li>
+                        <label for="email">메일</label>
+                        <input type="email" id="email" required >
+                    </li>
+                    <li>
+                        <label for="tel">전화</label>
+                        <input type="tel" id="tel" required value="01024013487">
+                    </li>
+                </ul>
+            </fieldset><br>
+            <fieldset >
+                <legend>파일 업로드</legend>
+                <input type="file">
+            </fieldset><br>
+
+            <input type="submit" value="submition">
+        </form>
+    </section>
+
+    <section style="margin: 20px;">
+        <p>
+            <h2><b>Study List 2023</b></h2>
+            <ol>
+                <h2>AI project</h2>
+                <li>CNN model -plant disease clasification</li>
+                <li>GAN model -with MNIST</li>
+                <li>GAN model 2 -with MNIST</li>
+                <li>Resnet18 model</li>
+                <li>DCGAN model - with CIFAR10</li>
+            </ol>
+            <ul>
+                <h3>C project</h3>
+                <li>Snake Game with C </li>
+                <li>Back_joon study</li>
+                <li>Programers</li>
+                <li>B+Tree</li>
+            </ul>
+        </p>
+        <br>
+        <p>
+            <h2><b>Study List 2022</b></h2>
+            <dl>
+                <dt>C++ 자료구조론</dt>
+                <dd>-리스트, 스택 등등</dd>
+                <dt>C++ 코딩테스트 알고리즘</dt>
+                <dd>-그리디, DFS, BFS 등등</dd>
+                <dt>python pytorch</dt>
+            </dl>
+        </p>
+    </section>
+    
+
+    <!-- 테이블 실습, 영화표 만들기-->
+    <table id="table_movie">
+        <caption>나의 베스트 영화</caption>
+        <thead>
+            <tr>
+                <th>영화제목</th>
+                <th>장르</th>
+                <th>평점</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>배테랑</td>
+                <td>형사,액션</td>
+                <td>10.0</td>
+            </tr>
+            <tr>
+                <td>아바타 물의길</td>
+                <td>판타지</td>
+                <td>10.0</td>
+            </tr>
+            <tr>
+                <td>신과함께</td>
+                <td>판타지</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>트랜스포머</td>
+                <td>SF</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>더글로리</td>
+                <td>드라마</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    
+    <!-- float속성 예제 부분 -->
+    <section class="best_food">
+        <h2>최애음식 ♥연어♥</h2>
+        <div class="img_container">
+            <img src="../imgs/연어1.jpg" alt="" class="salmon_img float_left">
+            <p>고향인 강으로 죽음을 무릅쓰고 건너가 후손을 남긴 후에 기력이 다해 죽는 그 과정이 무척 드라마틱해서 깊은 인상을 주는 
+                물고기이기도 하다. 특히 폭포를 힘차게 수면 밖으로 튀어올라 건너는 연어들의 모습은 대단한 근성이 느껴진다. 
+                폭포를 오르기도 힘들지만 이때 기다리던 곰들에게 잡히기도 한다. 곰이 폭포 위에 진을 치고 있으면 아주 그냥 입 안으로 
+                들어오는 수준.산란기가 9~11월 사이로 바다에서 강으로 가는 도중 물개와 상어의 좋은 표적이 된다. 특히 악상어는 강으로 가는 길목에 
+                진을 치고 연어들을 대량으로 먹어치워서 영어로 연어 상어(Salmon shark)라고 불릴 정도다. 그나마 겨우 강으로 돌아와도 
+                곰들이 월동 준비를 위해 식신 모드로 돌변한 상태인 데다가, 사람까지 존재하다보니 알 낳으러 돌아가는 길에 무진장 많이 
+                잡아먹힌다. 알래스카 일부 지역에서는 종종 늑대에게 잡아먹히기도 한다.
+            </p>
+            <br>
+            <img src="../imgs/연어2.jpg" alt="" class="salmon_img float_right">
+            <p> 
+                특히 지방분을 보충하기 어려운 숲속 생태계 
+                때문에 곰은 지방만 최대한 보충하기 위해서 심각하게 배가 고프지 않고 연어 수가 충분하다면 연어의 껍질과 미량영양이 
+                포함된 눈알만 먹어치우고, 늑대도 일부 지역의 종들은 체력 소모와 위험성이 있는 사슴 같은 육상 동물보다 오히려 그런 
+                걸 감수할 필요가 없는 연어(같은 물고기)를 더 선호하기도 한다. 고열량 먹이를 좋아하는 새들도 연어의 회귀를 놓치지 
+                않는다. 갈매기는 연어를 잡기에는 덩치가 너무 작아서 직접 잡지는 못하고 곰이 껍질만 벗겨먹은 연어살을 먹어치운다. 
+                또한 맹금류, 특히 흰머리수리와 흰꼬리수리, 참수리가 연어를 좋아하는데, 이들은 연어가 회귀하는 곳에 수백 마리가 
+                모여 있다가 얕은 곳으로 올라오는 연어를 사냥하거나 산란을 마치고 죽어가는 연어를 뜯어먹는다.
+            </p>
+            <!--p태그 속성으로 clear:both를 지정해 주면 p태그가 여러개 나와서 float이 될 때, float을 끝내줄 수 있다.-->
+        </div>
+    </section>
+    
+    
+    <article class="contect_button_fixed">
+        <div>
+            <div>카톡으로<br>문의하기</div>
+        </div>
+    </article>
+
+    <br>
+    <fieldset class="fieldset_text_box">
+        <legend>방문 후기</legend>
+        <textarea name="visiter_review" placeholder="후기를 작성해 주세요" ></textarea>
+        <ul style="display: inline-block;">
+            <li>1.만족도</li>
+            <li>2.칭찬</li>
+            <li>3.재미</li>
+        </ul>
+        <div id="star-five" style="display: inline-block;">fasdf</div>
+        <div id="star-five" style="display: inline-block;">fasdf</div>
+        <div id="star-five" style="display: inline-block;">fasdf</div>
+    </fieldset>
+
+    <footer>
+        <h5> <b>korea</b></h5>
+        <h6> 서울특별시 성북구 성북로 6가길 23, 304호</h6>
+        <div style="height: 500px; display:hidden"></div>
+    </footer>
+    
+</body>
+</html>

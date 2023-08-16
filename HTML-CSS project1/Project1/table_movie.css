@@ -1,0 +1,37 @@
+#table_movie
+{
+    border: 3px solid gray;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px;
+}
+
+#table_movie caption{
+    border: 3px solid blue;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#table_movie th, #table_movie td{
+    border: 1px solid blue;
+    padding: 20px;
+}
+
+#table_movie th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    background-color: green;
+    color: white;
+}
+#table_movie tr:nth-child(even){
+    background-color: plum;
+}
+#table_movie tr:hover{
+    background-color: rgb(201, 198, 198);
+}
+
+

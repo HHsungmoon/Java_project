@@ -1,0 +1,41 @@
+.visiter_list{
+    /* display: inline-block; */
+    margin: 20px;
+    border: 2px solid black;
+    width: 500px;
+    padding: 10px;
+}
+
+#visiter_cov19_check{
+    /* display: inline-block; */
+    margin: 20px;
+    width: 700px;
+    
+}
+
+.required_dot::before{
+    content: '*';
+    color: red;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+div.field input:focus{
+    border: 3px solid rgb(114, 162, 251);
+    box-shadow: 0 0 20px blue;
+    
+    outline: none;
+}
+
+[data-tooltip]{
+    position: relative;
+}
+[data-tooltip]:hover::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 220px;
+    background-color: aqua;
+    
+}
